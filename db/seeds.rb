@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Quiz.create(name: "Javascript", description: "This quiz covers concepts related to JavaScript.")
+Quiz.create(name: "Javascript", description: "This quiz covers concepts related to JavaScript.")
 
 JsQuestion.create(question: "What does the M in MVC stand for?", answer: "Model", option1: "Mode", option2: "Media")
 
