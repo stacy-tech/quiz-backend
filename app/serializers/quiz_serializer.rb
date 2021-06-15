@@ -1,3 +1,4 @@
 class QuizSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description
+  #include JSONAPI::Serializer
+  attributes :id, :name, :description, :js_questions
 end

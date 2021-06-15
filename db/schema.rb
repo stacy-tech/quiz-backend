@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2021_06_09_135852) do
     t.string "answer"
     t.string "option1"
     t.string "option2"
+    t.bigint "quiz_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["quiz_id"], name: "index_js_questions_on_quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -39,5 +41,6 @@ ActiveRecord::Schema.define(version: 2021_06_09_135852) do
     t.index ["quiz_id"], name: "index_results_on_quiz_id"
   end
 
+  add_foreign_key "js_questions", "quizzes", on_delete: :cascade
   add_foreign_key "results", "quizzes"
 end
