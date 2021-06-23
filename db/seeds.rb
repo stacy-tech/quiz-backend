@@ -69,9 +69,9 @@ JsQuestion.create(
 
 JsQuestion.create(
     question: "Inside which HTML element do we put the JavaScript?",
-    answer: "<Script>",
-    option1: "<JavaScript>",
-    option2: "<Scripting>",
+    answer: "Script",
+    option1: "JavaScript",
+    option2: "Scripting",
     quiz_id: 1
 )
 
