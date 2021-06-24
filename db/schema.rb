@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_135852) do
   create_table "results", force: :cascade do |t|
     t.string "name"
     t.bigint "quiz_id", null: false
+    t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["quiz_id"], name: "index_results_on_quiz_id"
