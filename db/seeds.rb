@@ -84,3 +84,6 @@ JsQuestion.create(
 
 )
 
+Result.create(name: "Stacy" , score:100, quiz_id: 1) 
+Result.create(name: "Kent", score: 95, quiz_id: 1)
+

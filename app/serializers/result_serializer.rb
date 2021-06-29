@@ -1,4 +1,4 @@
 class ResultSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :score
   has_one :quiz
 end
