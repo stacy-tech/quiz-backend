@@ -20,6 +20,7 @@ class ResultsController < ApplicationController
     if @result.save
       render json: @result, status: :created, location: @result
     else
+      logger.info(@result.errors)
       render json: @result.errors, status: :unprocessable_entity
     end
   end
@@ -46,6 +47,6 @@ class ResultsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def result_params
-      params.require(:result).permit(:name, :quiz_id)
+      params.require(:result).permit(:name, :quiz_id, :score)
     end
 end
